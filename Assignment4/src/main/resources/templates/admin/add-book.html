@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+		xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add a Book</title>
+<link rel="stylesheet" type="text/css" href="../static/css/styles.css"
+		th:href="@{/css/styles.css}" />
+</head>
+<body>
+<div class="book">
+	<h1>Add a new book</h1>
+	
+	<form action="#" th:action="@{/addBook}" method="post" th:object="${book}">
+		
+		Title: <input type="text" name="title" th:field="*{title}" >
+		<br>
+		Author: <input type="text" name="author" th:field="*{author}">
+		<br>
+		<input type="submit" value="Add Book!">
+		
+	</form>
+	
+
+	
+		<br>
+	
+	<form action="" th:action="@{/logout}" method="post">
+			<input type="hidden" name="_csrf" value="eb8885d5-773a-42f2-aff4-ad5dcc39b82b">
+				<input type="submit" value="Logout" >
+		</form>
+		<br>
+
+	<a th:href="@{/}">Back to index</a>
+
+</div>
+</body>
+</html>

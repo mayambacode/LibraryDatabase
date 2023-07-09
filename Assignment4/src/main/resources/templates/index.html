@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+		xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>The Index</title>
+<link rel="stylesheet" type="text/css" href="../static/css/styles.css"
+		th:href="@{/css/styles.css}" />
+</head>
+<body>
+	
+	<h1>Welcome to the Library Database</h1>
+	
+	<div>
+	
+		<table class="styled-table" style="border-collapse:collapse">
+			<tr>
+				<th>Title</th>
+				<th>Author</th>
+				<th>Reviews</th>
+			</tr>
+			<tr th:each="b: ${bookList}">
+				<td th:text="${b.title}"></td>
+				<td th:text="${b.author}"></td>
+				<td><a href="" th:href="|/bookReview/${b.id}|">View</a></td> 
+			</tr>
+		</table>
+		
+	</div>
+	
+	<div id="login" sec:authorize="isAnonymous()">
+		Login: <a href="#" th:href="@{/login}">here</a>		
+	</div>
+		
+		<div sec:authorize="hasRole('ADMIN')">
+			<a href="#" th:href="@{/admin}">Add a book</a>
+			
+		</div>
+		<br>
+		<div sec:authorize="isAuthenticated()">
+			<form action="" th:action="@{/logout}" method="post">
+				<input type="hidden" name="_csrf" value="eb8885d5-773a-42f2-aff4-ad5dcc39b82b">
+					<input type="submit" value="Logout" >
+			</form>
+		</div>
+		
+		
+			
+</body>
+</html>

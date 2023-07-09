@@ -1,0 +1,110 @@
+body{
+	
+	font-family: verdana ;
+}
+
+
+/* index page style */
+.styled-table  td{
+  	
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: verdana;
+    min-width: 200px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid;
+    padding: 5px;
+}
+
+.styled-table td{
+	text-align: center;
+}
+
+/*  login page style*/
+.login input[type=text], input[type=password] {
+  width: 25%;
+  padding: 15px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#no-register {
+	font-size: 15px;
+}
+
+/* register page style */
+input[type=submit]{
+	
+	background-color: #1d5e92;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border-style: solid ;
+  cursor: pointer;
+  
+}
+
+.register{
+	border:none;
+	border-collapse:collapse;
+}
+
+.register input[type= text]{
+   width:100%;
+   padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+   
+}
+
+/* view-book style */
+
+.view ul, li {
+	text-align:center;
+	list-style-position: inside;
+}
+
+#title {
+		text-align:center;
+	
+}
+
+/* add book style  */
+
+.book {
+	 margin: 25px 0;
+    font-size: 0.9em;
+    font-family: verdana;
+    min-width: 200px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+ 	padding: 15px 15px;
+	
+}
+
+.book input[type=text]{
+	
+	width:15%;
+   padding: 15px;
+  margin: 5px 0 5px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* review page style */
+
+.review{
+	 margin: 25px 0;
+    font-size: 0.9em;
+    font-family: verdana;
+    min-width: 200px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+ 	padding: 15px 15px;
+ 	
+}
+
+

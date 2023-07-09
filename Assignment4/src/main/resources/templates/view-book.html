@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+		xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>Review of Book</title>
+<link rel="stylesheet" type="text/css" href="../static/css/styles.css"
+		th:href="@{/css/styles.css}" />
+</head>
+<body>
+
+	<h1 id="title" th:text="|Reviews for ${book.title} by ${book.author}|"></h1>
+	
+	
+		<div th:if="${isReviewEmpty}">
+			<p>No reviews yet. Be the first to review it!</p>
+		</div>
+	
+	<div class="view" th:if="${!isReviewEmpty}">
+	
+		<ul th:each="r: ${bookList}">
+			
+			<li th:text="${r.text}"></li>
+		</ul>
+	</div>
+		
+	
+	<div sec:authorize="isAuthenticated()">
+				<a  href="#" th:href="@{/review/{bookId}(bookId=${book.id})}">Add a review</a>
+				<br>
+				<br>
+				<form action="" th:action="@{/logout}" method="post">
+					<input type="hidden" name="_csrf" value="eb8885d5-773a-42f2-aff4-ad5dcc39b82b">
+					<input type="submit" value="Logout" >
+				</form>
+		
+	</div>	
+	<br>
+	<div sec:authorize="isAnonymous()">
+			Want to leave a review? <a th:href="@{/login}">Login here</a>
+	</div>
+		<br>
+	<a th:href="@{/}">Back to index</a>
+	
+</body>
+</html>
