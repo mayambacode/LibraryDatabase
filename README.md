@@ -26,4 +26,3 @@ The application features a **Thymeleaf-based HTML interface** with custom CSS st
 - **Database:** MySQL
 - **Build Tool:** Maven (or Gradle — update if applicable)
 
-## 📂 Project Structure
