@@ -1,6 +1,6 @@
 # 📚 Library Database
 
-A full-stack **Java Spring Boot** application for managing a library system, including **books** and **reviews**.  
+A full-stack **Java Spring Boot** application for managing a library system, including **books** and **reviews**.
 The application features a **Thymeleaf-based HTML interface** with custom CSS styling, allowing users to view, add, and delete books and their reviews with secure access control.
 
 ## 🚀 Features
